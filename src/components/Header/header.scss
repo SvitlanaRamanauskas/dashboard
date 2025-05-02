@@ -1,9 +1,8 @@
 @use "../../styles/utiles/mixins.scss" as *;
 
 .header {
-  max-width: 1024px;
-  margin-inline: auto;
-  padding-inline: 10px;
+  @include pagePadding;
+  
   height: 60px;
   color: var(--text-color);
   display: flex;
@@ -12,12 +11,7 @@
   border-bottom: 1px solid var(--secondary-bg-color);
 
   @include on-tablet {
-    padding-inline: 20px;
     height: 80px;
-  }
-
-  @include on-desktop {
-    padding-inline: 0;
   }
 
   &__left {
@@ -35,7 +29,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    gap: 5px;
+    width: 50%;
+
+    @include on-tablet {
+      width: 40%;
+    }
   }
 }
 
@@ -47,31 +46,11 @@
     width: 100%;
     padding-left: 5px;
     background-color: var(--bg-item-color);
-    border-radius: var(--b-radius);
+    @include bordered;
 
     @include on-tablet {
       height: 48px;
       padding-left: 15px;
     }
-  }
-}
-
-.account {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: var(--violete-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include on-tablet {
-    width: 48px;
-    height: 48px;
-  }
-
-  &__text {
-    text-transform: uppercase;
-    color: white;
   }
 }

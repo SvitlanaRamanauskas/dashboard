@@ -1,0 +1,75 @@
+@use "../../../styles/utiles/variables" as *;
+@use "../../../styles/utiles/mixins" as *;
+
+.slider {
+  &__section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__container {
+    max-width: 1000px;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    transition: transform 0.3 ease;
+    gap: 15px;
+    list-style: none;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-inline: 10px;
+    height: 47px;
+    background-color: var(--bg-not-active);
+    @include bordered;
+    flex-shrink: 0;
+    min-width: fit-content;
+
+    &--active {
+      background-color: var(--text-accent-color);
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+  }
+
+  &__item-name {
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: 14px;
+    white-space: nowrap;
+
+    &--active {
+      color: white;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__button {
+    width: 47px;
+    height: 47px;
+    border: $border;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__arrow {
+
+  }
+}

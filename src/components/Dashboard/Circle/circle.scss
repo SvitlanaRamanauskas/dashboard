@@ -1,0 +1,26 @@
+@use "../../../styles/utiles/mixins" as *;
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(40deg, #1a2a5a 40%, var(--accent-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include on-tablet {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+
+    @include on-tablet {
+      font-size: 18px;
+    }
+  }
+}

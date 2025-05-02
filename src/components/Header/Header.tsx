@@ -1,3 +1,4 @@
+import Circle from "../Dashboard/Circle/Circle";
 import "./header.scss";
 
 export default function Header() {
@@ -16,9 +17,7 @@ export default function Header() {
           placeholder="search" />
         </div>
 
-        <div className="account">
-          <p className="account__text">ar</p>
-        </div>
+        <Circle abbr={"ar"} />
       </div>
     </header>
   )

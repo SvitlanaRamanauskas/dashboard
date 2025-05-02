@@ -1,0 +1,10 @@
+.breadcrumbs {
+  display: flex;
+  gap: 4px;
+  color: var(--text-color);
+  font-size: 14px;
+
+  & :last-child {
+    color: var(--text-accent-color);
+  }
+}

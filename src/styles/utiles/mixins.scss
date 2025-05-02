@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin on-tablet {
   @media (min-width: 640px) {
     @content;
@@ -5,7 +7,26 @@
 }
 
 @mixin on-desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     @content;
+  }
+}
+
+@mixin bordered {
+  border: $border;
+  border-radius: $b-radius;
+}
+
+@mixin pagePadding {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 10px;
+  
+  @include on-tablet {
+    padding-inline: 20px;
+  }
+
+  @include on-desktop {
+    padding-inline: 0;
   }
 }
