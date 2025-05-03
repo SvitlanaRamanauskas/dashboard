@@ -1,0 +1,55 @@
+@use "../../../styles/utiles/variables" as *;
+@use "../../../styles/utiles/mixins" as *;
+
+.table-accounts {
+  max-height: 392px;
+
+  &__premium {
+    color: var(--text-accent-color);
+  }
+
+  &__status {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    &-circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+
+      &--blue {
+        background-color: var(--text-accent-color);
+      }
+
+      &--yellow {
+        background-color: var(--pending);
+      }
+
+      &--green{
+        background-color: var(--active);
+      }
+    }
+  }
+
+  &__lossratio {
+    border-radius: $b-radius;
+    &--green {
+      background-color: var(--active);
+    }
+
+    &--yellow {
+      background-color: var(--pending);
+    }
+
+    &--red {
+      background-color: var(--red);
+    }
+  }
+
+  &__originator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

@@ -1,5 +1,5 @@
 {
   "navAcc": ["dashboard", "accounts","brokers", "submissions", "organizations", "Goals & Rules", "admin"],
   "navDash": ["dashboard", "accounts","brokers", "submissions", "organizations", "Goals & Rules", "admin", "admin", "admin", "admin", "admin"],
-  "queueItems": ["Asigned to me(12)", "Pending rewiew(8)", "Referrals(3)"]
+  "queueItems": ["Asigned to me (12)", "Pending rewiew (8)", "Referrals (3)"]
 }

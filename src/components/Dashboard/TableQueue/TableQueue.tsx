@@ -1,8 +1,8 @@
 import { QueueTableData } from "@/types/queue";
 import cn from "classnames";
 import "./tableQueue.scss";
-import Circle from "../Dashboard/Circle/Circle";
-import DotCircle from "../DotCircle/DotCircle";
+import Circle from "../Circle/Circle";
+import DotCircle from "../../DotCircle/DotCircle";
 
 type Props = {
   columns: string[];
@@ -24,6 +24,7 @@ export default function TableQueue({ columns, data }: Props) {
           {columns.map((col) => (
             <th key={col}>{col}</th>
           ))}
+          <th></th>
         </tr>
       </thead>
 
@@ -43,31 +44,27 @@ export default function TableQueue({ columns, data }: Props) {
                 const letters = getLetters(row[col]);
                 return (
                   <td key={col} className="table-queue__originator">
-                    <Circle abbr={letters} />
+                    <Circle abbr={letters} diametr="small" />
                     <div>{row.originator}</div>
                   </td>
                 );
               }
               if (col === "status") {
-                <td key={col} className="table__status">
-                  <div
-                    className={cn(
-                      {
-                        "table__status-circle table__status-circle--blue":
-                          row[col] === "New",
-                      },
-                      {
-                        "table__status-circle table__status-circle--yellow":
+                console.log(row[col]);
+                return (
+                  <td key={col} className="table-queue__status">
+                    <div
+                      className={cn("table-queue__status-circle", {
+                        "table-queue__status-circle--blue": row[col] === "New",
+                        "table-queue__status-circle--yellow":
                           row[col] === "Pending Review",
-                      },
-                      {
-                        "table__status-circle table__status-circle--green":
+                        "table-queue__status-circle--green":
                           row[col] === "Completed",
-                      }
-                    )}
-                  ></div>
-                  <span>{row.status}</span>
-                </td>;
+                      })}
+                    ></div>
+                    <span>{row.status}</span>
+                  </td>
+                );
               }
               // eslint-disable-next-line
               return <td key={col}>{(row as any)[col]}</td>;

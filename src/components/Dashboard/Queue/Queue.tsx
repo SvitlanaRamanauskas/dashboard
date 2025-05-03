@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import cn from "classnames";
 import "./queue.scss";
-import Table from "@/components/TableQueue/TableQueue";
+import Table from "@/components/Dashboard/TableQueue/TableQueue";
 import { QueueTableData } from "@/types/queue";
 
 export default function Queue() {
@@ -24,10 +24,9 @@ export default function Queue() {
     fetch("/mockData/tableWorkQueue.json")
       .then((res) => res.json())
       .then((data) => {
-        setTableColumns(data.queue.columns)
-        setTableData(data.queue.data)
+        setTableColumns(data.queue.columns);
+        setTableData(data.queue.data);
       });
-;
   }, []);
 
   return (

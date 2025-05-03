@@ -1,7 +1,7 @@
 @use "./variables" as *;
 
 @mixin on-tablet {
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
@@ -18,7 +18,7 @@
 }
 
 @mixin pagePadding {
-  max-width: 1200px;
+  max-width: 1400px;
   margin-inline: auto;
   padding-inline: 10px;
   

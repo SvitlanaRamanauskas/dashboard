@@ -1,29 +1,33 @@
 @use "../styles/utiles/variables" as *;
 @use "../styles/utiles/mixins" as *;
+@use "../styles/table" as *;
+@use "../fonts/fonts" as *;
+
 @import "tailwindcss";
 
 :root {
-  --light-text-color: #E5E7EB;
-  --text-color: #C5CAD3;
+  --light-text-color: #e5e7eb;
+  --text-color: #c5cad3;
   --secondary-text-color: #596275;
-  --text-accent-color: #3B82F6;
-  --accent-color: #1E40AF;
-  --secondary-bg-color: #313B54;
-  --bg-item-color: #1E2233;
+  --text-accent-color: #3b82f6;
+  --accent-color: #1e40af;
+  --secondary-bg-color: #313b54;
+  --bg-item-color: #1e2233;
   --bg-color: #121622;
-  --bg-not-active: #0C0F17;
-  --bg-color2: #252A3D;
-  --sdcj: #8A8C98;
-  --active: #3BB979;
-  --pending: #FDD261;
-  --red: #B93B3B;
-  --violete-color: #6A3BF6;
+  --bg-not-active: #0c0f17;
+  --bg-color2: #252a3d;
+  --sdcj: #8a8c98;
+  --active: #3bb979;
+  --pending: #fdd261;
+  --red: #b93b3b;
+  --violete-color: #6a3bf6;
 }
 
 body {
   background: var(--bg-color);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
 }
 
@@ -40,13 +44,42 @@ body {
   color: var(--light-text-color);
 }
 
-td {
-  color: var(--light-text-color);
-  font-weight: 100;
-}
+.dashboard {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  grid-template-rows: 1fr 1fr 40%;
+  grid-template-areas: 
+    "queuetable goals actions"
+    "queuetable goals intelligence"
+    "accounts accounts accounts";
+  height: 100%;
 
-th {
-  text-transform: uppercase;
-  font-weight: 100;
-  color: #94A3B8;
+  &__queue {
+    grid-area: queuetable;
+    height: 525px;
+
+    @media (min-width: 889px) {
+      height: 500px;
+    }
+
+    @include on-desktop {
+      height: 550px;
+    }
+  }
+  &__goals {
+    grid-area: goals;
+    background-color: lightgreen;
+  }
+  &__actions {
+    grid-area: actions;
+    background-color: khaki;
+  }
+  &__intelligence {
+    grid-area: intelligence;
+    background-color: orange;
+  }
+  &__accounts {
+    grid-area: accounts;
+    background-color: lightcoral;
+  }
 }

@@ -1,5 +1,6 @@
 @use "../../../styles/utiles/mixins" as *;
 
+
 .circle {
   width: 28px;
   height: 28px;
@@ -8,10 +9,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   @include on-tablet {
     width: 48px;
     height: 48px;
+  }
+
+  &--small {
+    width: 18px;
+    height: 18px;
+
+    @include on-tablet {
+      width: 22px;
+      height: 22px;
+    }
+
+    @include on-desktop {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__text {
@@ -21,6 +37,18 @@
 
     @include on-tablet {
       font-size: 18px;
+    }
+
+    &--small {
+      font-size: 10px;
+
+      @include on-tablet {
+        font-size: 12px;
+      }
+
+      @include on-desktop {
+        font-size: 14px;
+      }
     }
   }
 }

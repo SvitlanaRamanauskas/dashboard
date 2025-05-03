@@ -1,13 +1,21 @@
 import "./circle.scss";
+import cn from "classnames";
 
 type Props = {
   abbr: string;
+  diametr?: string;
 };
 
-export default function Circle({ abbr }: Props) {
+export default function Circle({ abbr, diametr }: Props) {
   return (
-    <div className="circle">
-      <p className="circle__text">{abbr}</p>
+    <div
+      className={cn("circle", {
+        "circle circle--small": diametr === "small",
+      })}
+    >
+      <p className={cn("circle__text", {
+        "circle__text circle__text--small": diametr === "small",
+      })}>{abbr}</p>
     </div>
   );
 }

@@ -1,0 +1,40 @@
+@use "../../../styles/utiles/variables" as *;
+@use "../../../styles/utiles/mixins" as *;
+
+.table-queue {
+  max-height: 392px;
+
+  &__status {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    &-circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+
+      &--blue {
+        background-color: var(--text-accent-color);
+      }
+
+      &--yellow {
+        background-color: var(--pending);
+      }
+
+      &--green{
+        background-color: var(--active);
+      }
+    }
+  }
+
+  &__originator {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    @include on-desktop {
+      gap: 6px;
+    }
+  }
+}

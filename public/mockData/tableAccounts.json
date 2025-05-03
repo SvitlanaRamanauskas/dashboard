@@ -1,0 +1,75 @@
+{
+  "accounts": {
+    "columns": [
+      "account name/type",
+      "line",
+      "broker",
+      "reneval date",
+      "premium",
+      "rated premium",
+      "loss ratio",
+      "appettite",
+      "status",
+      "triage",
+      "winnability"
+    ],
+    "data": [
+      {
+        "accountName": "NAMEX tech solutions",
+        "type": "Large Enterprise",
+        "line": "D&O Liability",
+        "broker": "Wills Towers",
+        "renevalDate": "04/16/2025",
+        "premium": "$2.3M",
+        "ratedPremium": "$2.8M",
+        "lossRatio": 32,
+        "appettite": "HIGH",
+        "status": "Active",
+        "triage": "180",
+        "winnability": "Very Strong"
+      },
+      {
+        "accountName": "Alliance Healthcare Systems",
+        "type": "Mid-Market",
+        "line": "Medical Malpractice",
+        "broker": "Aon Risk",
+        "renevalDate": "06/30/2025",
+        "premium": "$1.7M",
+        "ratedPremium": "$1.9M",
+        "lossRatio": 38,
+        "appettite": "MEDIUM",
+        "status": "Under review",
+        "triage": "165",
+        "winnability": "Strong"
+      },
+      {
+        "accountName": "Maritime Logistics Corp",
+        "type": "Shipping/Logistics",
+        "line": "Marine Cargo",
+        "broker": "Marsh McLennan",
+        "renevalDate": "09/05/2025",
+        "premium": "$875K",
+        "ratedPremium": "$920K",
+        "lossRatio": 25,
+        "appettite": "HIGH",
+        "status": "Active",
+        "triage": "182",
+        "winnability": "Very Strong"
+      },
+      {
+        "accountName": "GreenField Energy Ltd",
+        "type": "Energy Sector",
+        "line": "Environmental Liability",
+        "broker": "Aon Risk",
+        "renevalDate": "07/22/2025",
+        "premium": "$1.2M",
+        "ratedPremium": "$1.4M",
+        "lossRatio": 67,
+        "appettite": "Cautious",
+        "status": "Under review",
+        "triage": "158",
+        "winnability": "Medium"
+      }
+    ]
+  }
+}
