@@ -3,47 +3,67 @@
 
 .table-accounts {
   max-height: 392px;
+  width: 100%;
+
+  thead {
+    th {
+      min-width: 45px;
+      padding-inline: 5px;
+
+      @include on-desktop {
+        min-width: 80px;
+      }
+    }
+  }
 
   &__premium {
     color: var(--text-accent-color);
+  }
+
+  &__rated-premium-text {
+    text-align: end;
   }
 
   &__status {
     display: flex;
     gap: 5px;
     align-items: center;
-
-    &-circle {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-
-      &--blue {
-        background-color: var(--text-accent-color);
-      }
-
-      &--yellow {
-        background-color: var(--pending);
-      }
-
-      &--green{
-        background-color: var(--active);
-      }
-    }
   }
 
-  &__lossratio {
+  &__ellipse {
     border-radius: $b-radius;
+    width: 35px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 400;
+
+    @include on-desktop {
+      width: 52px;
+    }
+
     &--green {
       background-color: var(--active);
     }
 
     &--yellow {
+      color: black;
       background-color: var(--pending);
     }
 
     &--red {
       background-color: var(--red);
+    }
+
+    &--appetite {
+      width: 51px;
+
+      @include on-desktop {
+        width: 83px;
+        padding-inline: 10px;
+      }
+
+      background-color: var(--accent-color);
     }
   }
 
@@ -51,5 +71,44 @@
     display: flex;
     align-items: center;
     gap: 6px;
+  }
+
+  &__triage {
+    width: 30px;
+
+    @include on-desktop {
+      width: 43px;
+    }
+
+    @include border-color-item;
+  }
+
+  &__winnability {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline: 5px;
+
+    @include on-desktop {
+      padding-inline: 10px;
+    }
+
+    @include border-color-item;
+
+    &-circles {
+      display: none;
+
+      @include on-desktop {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+      }
+    }
+
+    &-text {
+      white-space: nowrap;
+    }
   }
 }

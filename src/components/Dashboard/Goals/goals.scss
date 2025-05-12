@@ -1,0 +1,118 @@
+@use "../../../styles/utiles/variables" as *;
+@use "../../../styles/utiles/mixins" as *;
+
+.goals {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__indicator {
+  }
+
+  &__line {
+    width: 100%;
+    height: 25px;
+    margin-top: 30px;
+    display: flex;
+    border-radius: $b-radius;
+    position: relative;
+
+    &--green {
+      border-top-left-radius: $b-radius;
+      border-bottom-left-radius: $b-radius;
+      width: 40%;
+      background-color: var(--active);
+    }
+
+    &--yellow {
+      width: 30%;
+      background-color: var(--pending);
+    }
+
+    &--red {
+      border-top-right-radius: $b-radius;
+      border-bottom-right-radius: $b-radius;
+      width: 40%;
+      background-color: var(--red);
+    }
+
+    &--red-2 {
+      border-top-left-radius: $b-radius;
+      border-bottom-left-radius: $b-radius;
+      width: 17.5%;
+      background-color: var(--red);
+    }
+
+    &--yellow-2 {
+      width: 33.3%;
+      background-color: var(--pending);
+    }
+
+    &--green-2 {
+      width: 14.2%;
+      background-color: var(--active);
+    }
+
+    &--yellow-3 {
+      border-top-right-radius: $b-radius;
+      border-bottom-right-radius: $b-radius;
+      width: 35%;
+      background-color: var(--pending);
+    }
+  }
+
+  &__number {
+    position: absolute;
+    color: var(--light-text-color);
+    font-size: 12px;
+    font-weight: bolder;
+
+    &--first {
+      left: 25%;
+      top: 5px;
+    }
+
+    &--second {
+      left: 53%;
+      top: 5px;
+    }
+  }
+
+  &__flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+
+    &--top {
+      position: absolute;
+      top: -25px;
+      left: 45%;
+    }
+
+    &--bottom {
+      position: absolute;
+      bottom: -25px;
+      left: 25%;
+    }
+
+    &--bottom-2 {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+    }
+  }
+
+  &__tg {
+    font-size: 8px;
+    font-weight: bolder;
+    line-height: 8px;
+    color: var(--text-small);
+    opacity: 0.5;
+
+    &--active {
+      color: var(--active);
+    }
+  }
+}

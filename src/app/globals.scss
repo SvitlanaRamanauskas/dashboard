@@ -1,6 +1,7 @@
 @use "../styles/utiles/variables" as *;
 @use "../styles/utiles/mixins" as *;
 @use "../styles/table" as *;
+@use "../styles/status-circle" as *;
 @use "../fonts/fonts" as *;
 
 @import "tailwindcss";
@@ -21,6 +22,7 @@
   --pending: #fdd261;
   --red: #b93b3b;
   --violete-color: #6a3bf6;
+  --text-small: #94a3b8;
 }
 
 body {
@@ -29,6 +31,18 @@ body {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 300;
   box-sizing: border-box;
+}
+
+article {
+  background-color: var(--bg-item-color);
+  @include bordered;
+}
+
+.head-name {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 10px;
+  color: #94A3B8;
 }
 
 .container {

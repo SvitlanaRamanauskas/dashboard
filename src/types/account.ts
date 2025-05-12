@@ -3,11 +3,11 @@ export type AccountTableData = {
   type: string,
   line:  string,
   broker: string,
-  renevalDate: string,
+  renewalDate: string,
   premium: string,
   ratedPremium: string,
   lossRatio: number,
-  appettite: string,
+  appetite: string,
   status: string,
   triage: string,
   winnability: string

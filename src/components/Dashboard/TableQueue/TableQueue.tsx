@@ -22,15 +22,15 @@ export default function TableQueue({ columns, data }: Props) {
       <thead>
         <tr>
           {columns.map((col) => (
-            <th key={col}>{col}</th>
+            <th className="head-name" key={col}>{col}</th>
           ))}
           <th></th>
         </tr>
       </thead>
 
       <tbody>
-        {data.map((row, rowIndex) => (
-          <tr key={rowIndex}>
+        {data.map((row) => (
+          <tr key={row.client}>
             {columns.map((col) => {
               if (col === "client/line") {
                 return (

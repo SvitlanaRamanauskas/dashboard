@@ -1,0 +1,55 @@
+@use "../../../styles/utiles/variables" as *;
+@use "../../../styles/utiles/mixins" as *;
+
+.accounts {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 30px 10px;
+  gap: 20px;
+  background-color: var(--bg-item-color);
+  max-height: 650px;
+  @include bordered;
+
+  @include on-desktop {
+    padding: 20px 20px 30px 20px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__item {
+    background-color: var(--bg-not-active);
+    border-radius: $b-radius;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 3px 16px;
+
+    @include on-desktop {
+      height: 32px;
+    }
+
+    &--active {
+      background-color: var(--text-accent-color);
+    }
+  }
+
+  &__item-name {
+    text-transform: capitalize;
+    color: var(--text-color);
+    white-space: nowrap;
+    font-size: 10px;
+    line-height: 24px;
+
+    @include on-desktop {
+      font-size: 14px;
+      line-height: 32px;
+    }
+
+    &--active {
+      color: white;
+    }
+  }
+}

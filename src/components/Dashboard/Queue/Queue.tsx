@@ -37,7 +37,7 @@ export default function Queue() {
         <ul className="queue__list">
           {queueItems.map((item) => (
             <li
-              key={1}
+              key={item}
               className={cn("queue__item", {
                 "queue__item queue__item--active": activeItem === item,
               })}

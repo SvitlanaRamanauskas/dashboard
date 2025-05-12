@@ -17,11 +17,20 @@
   border-radius: $b-radius;
 }
 
+@mixin border-color-item {
+  border: 1px solid var(--text-accent-color);
+  border-radius: $b-radius;
+  color: var(--text-accent-color);
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+}
+
 @mixin pagePadding {
   max-width: 1400px;
   margin-inline: auto;
   padding-inline: 10px;
-  
+
   @include on-tablet {
     padding-inline: 20px;
   }

@@ -1,0 +1,18 @@
+.status-circle {
+  min-width: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &--blue {
+    background-color: var(--text-accent-color);
+  }
+
+  &--yellow {
+    background-color: var(--pending);
+  }
+
+  &--green {
+    background-color: var(--active);
+  }
+}
