@@ -2,26 +2,37 @@
 @use "../../../styles/utiles/mixins" as *;
 
 .table-accounts {
-  max-height: 392px;
   width: 100%;
 
-  thead {
-    th {
-      min-width: 45px;
-      padding-inline: 5px;
+  tr {
+    @include hover-button;
+  }
 
-      @include on-desktop {
-        min-width: 80px;
-      }
+  td:nth-child(5),
+  td:nth-child(6),
+  th:nth-child(5),
+  th:nth-child(6)  {
+    text-align: end;
+  }
+
+  td:nth-child(10) {
+    text-align: center;
+  }
+
+  td:first-child {
+    min-width: 100px;
+
+    @include on-desktop {
+      min-width: 200px;
     }
+  }
+
+  th {
+    width: 8.3%;
   }
 
   &__premium {
     color: var(--text-accent-color);
-  }
-
-  &__rated-premium-text {
-    text-align: end;
   }
 
   &__status {

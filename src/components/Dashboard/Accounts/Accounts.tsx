@@ -7,7 +7,6 @@ import FilterPanel from "../FilterPannel/FilterPanel";
 import { AccountTableData } from "@/types/account";
 
 export default function Accounts() {
-
   const [accTableColumns, setAccTableColumns] = useState([]);
   const [accTableData, setAccTableData] = useState<AccountTableData[]>([]);
 

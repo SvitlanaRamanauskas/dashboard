@@ -1,0 +1,35 @@
+@use "../../../styles/utiles/variables" as *;
+@use "../../../styles/utiles/mixins" as *;
+
+.actions {
+  height: 100%;
+  padding: 20px;
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__item{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    background-color: var(--text-accent-color);
+    color: white;
+    border-radius: $b-radius;
+    text-transform: capitalize;
+    
+    @include hover-button;
+
+    @include on-desktop {
+      font-size: 14px;
+    }
+  }
+}

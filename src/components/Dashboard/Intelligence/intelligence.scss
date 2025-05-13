@@ -1,0 +1,42 @@
+@use "../../../styles/utiles/variables" as *;
+@use "../../../styles/utiles/mixins" as *;
+
+.intelligence {
+  height: 100%;
+  padding: 20px;
+
+  &__title {
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  &__item {
+    border-bottom: $border;
+    display: flex;
+    gap: 7px;
+    padding-bottom: 3px;
+  }
+
+  &__name {
+    color: var(--light-text-color);
+    font-size: 12px;
+
+    @include on-desktop {
+      font-size: 14px;
+    }
+  }
+
+  &__status {
+    width: 16px;
+    height: 16px;
+
+    &-wrapper {
+      min-width: 16px;
+    }
+  }
+}

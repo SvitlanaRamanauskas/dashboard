@@ -67,33 +67,28 @@ article {
     "queuetable goals intelligence"
     "accounts accounts accounts";
   height: 100%;
+  row-gap: 20px;
+  column-gap: 10px;
 
   &__queue {
     grid-area: queuetable;
-    height: 525px;
-
-    @media (min-width: 889px) {
-      height: 500px;
-    }
-
-    @include on-desktop {
-      height: 550px;
-    }
+    height: 100%;
   }
+
   &__goals {
     grid-area: goals;
-    background-color: lightgreen;
+    height: 100%;
   }
+
   &__actions {
     grid-area: actions;
-    background-color: khaki;
   }
+
   &__intelligence {
     grid-area: intelligence;
-    background-color: orange;
   }
+
   &__accounts {
     grid-area: accounts;
-    background-color: lightcoral;
   }
 }

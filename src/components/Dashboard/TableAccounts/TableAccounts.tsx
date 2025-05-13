@@ -2,6 +2,7 @@ import cn from "classnames";
 import "./tableAccounts.scss";
 import DotCircle from "@/components/DotCircle/DotCircle";
 import { AccountTableData, ColumnKey } from "@/types/account";
+import { useRouter } from "next/navigation";
 
 type Props = {
   columns: ColumnKey[];
@@ -9,6 +10,14 @@ type Props = {
 };
 
 export default function TableAccounts({ columns, data }: Props) {
+  const router = useRouter();
+
+  const handleRowClick = (accountName: string) => {
+    const encoded = encodeURIComponent(accountName);
+
+    router.push(`/accounts/${encoded}`);
+  }
+
   const renderCellContent = (col: ColumnKey, row: AccountTableData) => {
     switch (col) {
       case "account name/type":
@@ -117,8 +126,7 @@ export default function TableAccounts({ columns, data }: Props) {
 
       <tbody>
         {data.map((row) => (
-          // eslint-disable-next-line
-          <tr key={row.accountName}>
+          <tr key={row.accountName} onClick={() => handleRowClick(row.accountName)}>
             {columns.map((col) => (
               <td key={col} className={getCellClassName(col)}>
                 {renderCellContent(col, row)}

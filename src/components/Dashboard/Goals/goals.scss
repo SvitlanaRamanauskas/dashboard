@@ -2,21 +2,41 @@
 @use "../../../styles/utiles/mixins" as *;
 
 .goals {
-  padding: 10px;
+  padding: 20px 20px 20px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+  height: 100%;
 
-  &__indicator {
+  &__third {
+    margin-top: 30px;
   }
 
   &__line {
-    width: 100%;
     height: 25px;
     margin-top: 30px;
     display: flex;
-    border-radius: $b-radius;
     position: relative;
+
+    &--loss-ratio,
+    &--renewal-retention {
+      width: 100%;
+    }
+
+    &--business-target {
+      width: 82%;
+      background-color: var(--secondary-bg-color);
+      border-bottom-right-radius: $b-radius;
+      border-top-right-radius: $b-radius;
+      margin: 0;
+
+      &-wrapper {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        margin: 0;
+      }
+    }
 
     &--green {
       border-top-left-radius: $b-radius;
@@ -62,20 +82,51 @@
     }
   }
 
+  &__gradient {
+    position: relative;
+    width: 50.25%;
+    border-bottom-right-radius: $b-radius;
+    border-top-right-radius: $b-radius;
+    background: linear-gradient(
+      90deg,
+      var(--secondary-bg-color) 5%,
+      var(--text-accent-color)
+    );
+    padding-right: 10px;
+
+    &-percentage {
+      position: absolute;
+      right: 0;
+      top: 27px;
+    }
+
+    &-number {
+      text-align: end;
+      font-size: 10px;
+      font-weight: bolder;
+      line-height: 25px;
+      color: white;
+
+      &--aside {
+        text-align: end;
+        color: var(--light-text-color);
+      }
+    }
+  }
+
   &__number {
     position: absolute;
     color: var(--light-text-color);
     font-size: 12px;
     font-weight: bolder;
+    top: 5px;
 
     &--first {
       left: 25%;
-      top: 5px;
     }
 
     &--second {
       left: 53%;
-      top: 5px;
     }
   }
 
@@ -113,6 +164,10 @@
 
     &--active {
       color: var(--active);
+    }
+
+    &--light {
+      opacity: 1;
     }
   }
 }

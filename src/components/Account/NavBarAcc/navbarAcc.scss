@@ -20,6 +20,12 @@
     height: 47px;
     background-color: var(--bg-not-active);
     @include bordered;
+    transition: background-color 0.3 ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--accent-color);
+    }
 
     &--active {
       background-color: var(--accent-color);

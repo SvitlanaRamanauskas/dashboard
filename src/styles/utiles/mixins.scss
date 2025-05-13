@@ -39,3 +39,12 @@
     padding-inline: 0;
   }
 }
+
+@mixin hover-button {
+  transition: opacity 0.3 ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

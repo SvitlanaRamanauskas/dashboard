@@ -22,7 +22,12 @@ export default function TableQueue({ columns, data }: Props) {
       <thead>
         <tr>
           {columns.map((col) => (
-            <th className="head-name" key={col}>{col}</th>
+            <th
+              className="head-name"
+              key={col}
+            >
+              {col}
+            </th>
           ))}
           <th></th>
         </tr>
@@ -50,7 +55,6 @@ export default function TableQueue({ columns, data }: Props) {
                 );
               }
               if (col === "status") {
-                console.log(row[col]);
                 return (
                   <td key={col} className="table-queue__status">
                     <div

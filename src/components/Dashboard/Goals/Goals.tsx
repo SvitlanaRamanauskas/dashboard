@@ -9,7 +9,7 @@ export default function Goals() {
       <div className="goals__indicator goals__indicator--first">
         <h3 className="head-name">portfolio loss ratio target</h3>
 
-        <div className="goals__line">
+        <div className="goals__line goals__line--loss-ratio">
           <div className="goals__line--green"></div>
           <div className="goals__line--yellow"></div>
           <div className="goals__line--red"></div>
@@ -45,7 +45,7 @@ export default function Goals() {
       <div className="goals__indicator goals__indicator--second">
         <h3 className="head-name">renewal retention</h3>
 
-         <div className="goals__line">
+        <div className="goals__line goals__line--renewal-retention">
           <div className="goals__line--red-2"></div>
           <div className="goals__line--yellow-2"></div>
           <div className="goals__line--green-2"></div>
@@ -73,10 +73,32 @@ export default function Goals() {
 
       <div className="goals__third">
         <h3 className="head-name">new business target</h3>
+
+        <div className="goals__line goals__line--business-target-wrapper">
+          <div className="goals__line goals__line--business-target">
+            <div className="goals__gradient">
+              <p className="goals__gradient-number">$8.1M</p>
+              <p className="goals__tg goals__gradient-percentage">67%</p>
+            </div>
+          </div>
+
+          <span className="goals__gradient-number goals__gradient-number--aside">$12M</span>
+        </div>
       </div>
 
       <div className="goals__fourth">
         <h3 className="head-name">annual gwp target</h3>
+
+        <div className="goals__line goals__line--business-target-wrapper">
+          <div className="goals__line goals__line--business-target">
+            <div className="goals__gradient">
+              <p className="goals__gradient-number">$28.4M</p>
+              <p className="goals__tg goals__gradient-percentage goals__tg--light">68%</p>
+            </div>
+          </div>
+
+          <span className="goals__gradient-number goals__gradient-number--aside">$42M</span>
+        </div>
       </div>
     </article>
   );

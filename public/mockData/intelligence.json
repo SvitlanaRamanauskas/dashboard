@@ -1,0 +1,16 @@
+{
+  "intelligence": [
+    {
+      "name": "Rate hardening in Cyber market -+15% YoY",
+      "status": "red"
+    },
+    {
+      "name": "New capacity entering Marine market",
+      "status": "yellow"
+    },
+    {
+      "name": "Environmental regulatory changes in CA",
+      "status": "blue"
+    }
+  ]
+}

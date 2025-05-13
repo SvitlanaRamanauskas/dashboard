@@ -2,6 +2,8 @@ import NavBarDash from "@/components/Dashboard/Slider/Slider";
 import Queue from "@/components/Dashboard/Queue/Queue";
 import Accounts from "@/components/Dashboard/Accounts/Accounts";
 import Goals from "@/components/Dashboard/Goals/Goals";
+import Actions from "@/components/Dashboard/Actions/Actions";
+import Intelligence from "@/components/Dashboard/Intelligence/Intelligence";
 
 export default function Home() {
   return (
@@ -18,11 +20,11 @@ export default function Home() {
         </div>
 
         <div className="dashboard__actions">
-          
+          <Actions />
         </div>
         
         <div className="dashboard__intelligence">
-          
+          <Intelligence />
         </div>
 
         <div className="dashboard__accounts">

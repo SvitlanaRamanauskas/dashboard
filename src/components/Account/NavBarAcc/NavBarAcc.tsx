@@ -4,10 +4,26 @@ import { useEffect, useState } from "react";
 import cn from "classnames";
 import Image from "next/image";
 import "./navbarAcc.scss";
+import { useRouter } from "next/navigation";
 
 export default function NavBarAcc() {
   const [navBarAcc, setNavBarAcc] = useState<string[]>([]);
   const [activeTab, setActiveTab] = useState("accounts");
+
+  const router = useRouter();
+
+const handleClickNavItem = (name: string) => {
+  if (name === "dashboard") {
+    router.push("/");
+  }
+};
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    }
+
+  }, []);
 
   useEffect(() => {
     fetch("/mockData/navBar.json")
@@ -30,7 +46,10 @@ export default function NavBarAcc() {
               className={cn("nav__item", {
                 "nav__item nav__item--active": activeTab === adaptedItem,
               })}
-              onClick={() => setActiveTab(adaptedItem)}
+              onClick={() => {
+                setActiveTab(adaptedItem)
+                handleClickNavItem(adaptedItem)
+              }}
             >
               <div className="nav__icon">
                 <Image alt={item} src={iconPath} width={18} height={18} />

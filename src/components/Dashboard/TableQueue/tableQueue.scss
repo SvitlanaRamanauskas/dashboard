@@ -2,7 +2,11 @@
 @use "../../../styles/utiles/mixins" as *;
 
 .table-queue {
-  max-height: 392px;
+  width: 100%;
+
+  & th {
+    width: 20%;
+  }
 
   &__status {
     display: flex;
