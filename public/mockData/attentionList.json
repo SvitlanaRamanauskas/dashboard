@@ -1,0 +1,19 @@
+{
+  "attentionList": [
+    {
+      "task": "Marine Survey Required",
+      "details": "Scheduled for 06.12.2025",
+      "link": "Review details link"
+    },
+    {
+      "task": "Loss Controll Complete",
+      "details": "Last inspection 02.15.2025",
+      "link": "View report"
+    },
+    {
+      "task": "Claims Review Required",
+      "details": "3 open claims // $245,000 TTL",
+      "link": "View claims"
+    }
+  ]
+}

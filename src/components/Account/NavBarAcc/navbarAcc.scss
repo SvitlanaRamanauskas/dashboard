@@ -15,12 +15,15 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    min-width: fit-content;
     padding-inline: 10px;
     height: 47px;
     background-color: var(--bg-not-active);
     @include bordered;
     cursor: pointer;
+    box-sizing: border-box;
 
     &--active {
       background-color: var(--accent-color);
@@ -28,14 +31,13 @@
   }
 
   &__icon {
-    width: 20px;
-    height: auto;
+    flex-shrink: 0;
   }
 
   &__item-name {
     text-transform: capitalize;
     color: var(--text-color);
-    font-size: 14px;
+    font-size: 12px;
     transition: color 0.3s ease-in-out;
 
     &:hover {

@@ -1,0 +1,69 @@
+@use '../../../styles/utiles/variables' as *;
+@use '../../../styles/utiles/mixins' as *;
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  
+
+  @include on-tablet {
+    flex-direction: row;
+    align-items: flex-end;
+     gap: 10px;
+  }
+
+  &__logo {
+    border-radius: 50%;
+  }
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  @include on-tablet {
+    flex-direction: row;
+    width: 58%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: var(--light-text-color);
+    font-weight: 200;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    height: 44px;
+
+    &:first-child {
+      width: 40%;
+    }
+
+    &:not(:first-child) {
+      padding-left: 10px;
+      border-left: 1px solid var(--secondary-bg-color);
+    }
+  }
+
+  &__text-info {
+    color: var(--light-text-color);
+  }
+
+  &__text-info {
+    color: var(--light-text-color);
+    font-size: 10px;
+  }
+}

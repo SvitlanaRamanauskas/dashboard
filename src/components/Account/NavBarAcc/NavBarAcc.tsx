@@ -50,9 +50,15 @@ export default function NavBarAcc() {
                 handleClickNavItem(adaptedItem);
               }}
             >
-              <div className="nav__icon">
-                <Image alt={item} src={iconPath} width={18} height={18} />
-              </div>
+              <Image
+                className="nav__icon"
+                alt={item}
+                src={iconPath}
+                width={18}
+                height={18}
+                style={{ objectFit: 'cover', objectPosition: 'left' }}
+              />
+
               <p
                 className={cn('nav__item-name', {
                   'nav__item-name nav__item-name--active':

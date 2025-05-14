@@ -1,0 +1,15 @@
+@use '../../styles/utiles/mixins' as *;
+@use '../../styles/utiles/variables' as *;
+
+.no-adaptation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+
+  &__title {
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 200;
+  }
+}

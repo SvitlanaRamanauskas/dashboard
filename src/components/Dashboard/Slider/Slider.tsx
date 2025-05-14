@@ -7,7 +7,8 @@ import './slider.scss';
 
 export default function Slider() {
   const [navBarDash, setNavBarDash] = useState<string[]>([]);
-  const [activeDashTab, setActiveDashTab] = useState('dashboard');
+  const [activeDashTabPlusIndex, setActiveDashTabPlusIndex] =
+    useState('dashboard0');
   const listRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -36,32 +37,32 @@ export default function Slider() {
             {navBarDash.map((item, index) => {
               const adaptedItem = item.replace(/&/, 'and').replace(/\s+/g, '-');
               const iconPath = `/icons/${
-                activeDashTab === adaptedItem
+                activeDashTabPlusIndex === adaptedItem + index
                   ? adaptedItem + 'Active'
                   : adaptedItem
               }.svg`;
 
               return (
                 <li
-                  key={item + index}
+                  key={adaptedItem + index}
                   className={cn('slider__item', {
                     'slider__item slider__item--active':
-                      activeDashTab === adaptedItem,
+                      activeDashTabPlusIndex === adaptedItem + index,
                   })}
-                  onClick={() => setActiveDashTab(adaptedItem)}
+                  onClick={() => setActiveDashTabPlusIndex(adaptedItem + index)}
                 >
                   <Image
                     className="slider__icon"
-                    style={{ flexShrink: 0 }}
                     alt={item}
                     src={iconPath}
                     width={18}
                     height={18}
+                    style={{ objectFit: 'cover', objectPosition: 'left' }}
                   />
                   <p
                     className={cn('slider__item-name', {
                       'slider__item-name slider__item-name--active':
-                        activeDashTab === adaptedItem,
+                        activeDashTabPlusIndex === adaptedItem + index,
                     })}
                   >
                     {item}
