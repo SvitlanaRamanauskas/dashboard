@@ -4,8 +4,6 @@
 @use "../styles/status-circle" as *;
 @use "../fonts/fonts" as *;
 
-@import "tailwindcss";
-
 :root {
   --light-text-color: #e5e7eb;
   --text-color: #c5cad3;
@@ -42,14 +40,15 @@ article {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 10px;
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 .container {
-  @include pagePadding;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  
+  @include pagePadding;
 }
 
 .sub-title {
@@ -62,7 +61,7 @@ article {
   display: grid;
   grid-template-columns: 60% 20% 20%;
   grid-template-rows: 1fr 1fr 40%;
-  grid-template-areas: 
+  grid-template-areas:
     "queuetable goals actions"
     "queuetable goals intelligence"
     "accounts accounts accounts";
