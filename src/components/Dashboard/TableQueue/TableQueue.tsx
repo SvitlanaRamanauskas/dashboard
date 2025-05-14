@@ -1,8 +1,8 @@
-import { QueueTableData } from "@/types/queue";
-import cn from "classnames";
-import "./tableQueue.scss";
-import Circle from "../Circle/Circle";
-import DotCircle from "../../DotCircle/DotCircle";
+import { QueueTableData } from '@/types/queue';
+import cn from 'classnames';
+import './tableQueue.scss';
+import Circle from '../Circle/Circle';
+import DotCircle from '../../DotCircle/DotCircle';
 
 type Props = {
   columns: string[];
@@ -12,9 +12,9 @@ type Props = {
 export default function TableQueue({ columns, data }: Props) {
   const getLetters = (name: string) => {
     return name
-      .split(" ")
+      .split(' ')
       .map((word) => word[0].toUpperCase())
-      .join("");
+      .join('');
   };
 
   return (
@@ -22,10 +22,7 @@ export default function TableQueue({ columns, data }: Props) {
       <thead>
         <tr>
           {columns.map((col) => (
-            <th
-              className="head-name"
-              key={col}
-            >
+            <th className="head-name" key={col}>
               {col}
             </th>
           ))}
@@ -37,7 +34,7 @@ export default function TableQueue({ columns, data }: Props) {
         {data.map((row) => (
           <tr key={row.client}>
             {columns.map((col) => {
-              if (col === "client/line") {
+              if (col === 'client/line') {
                 return (
                   <td key={col}>
                     {row.client} <br />
@@ -45,7 +42,7 @@ export default function TableQueue({ columns, data }: Props) {
                   </td>
                 );
               }
-              if (col === "originator") {
+              if (col === 'originator') {
                 const letters = getLetters(row[col]);
                 return (
                   <td key={col} className="table-queue__originator">
@@ -54,16 +51,16 @@ export default function TableQueue({ columns, data }: Props) {
                   </td>
                 );
               }
-              if (col === "status") {
+              if (col === 'status') {
                 return (
                   <td key={col} className="table-queue__status">
                     <div
-                      className={cn("table-queue__status-circle", {
-                        "table-queue__status-circle--blue": row[col] === "New",
-                        "table-queue__status-circle--yellow":
-                          row[col] === "Pending Review",
-                        "table-queue__status-circle--green":
-                          row[col] === "Completed",
+                      className={cn('table-queue__status-circle', {
+                        'table-queue__status-circle--blue': row[col] === 'New',
+                        'table-queue__status-circle--yellow':
+                          row[col] === 'Pending Review',
+                        'table-queue__status-circle--green':
+                          row[col] === 'Completed',
                       })}
                     ></div>
                     <span>{row.status}</span>

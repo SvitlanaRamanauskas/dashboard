@@ -1,10 +1,10 @@
-import "./filterPanel.scss";
+import './filterPanel.scss';
 
 export default function FilterPanel() {
   return (
     <div className="filter-panel">
       <h2 className="sub-title quque__title">My accounts</h2>
-      
+
       <div className="search filter-panel__search">
         <input
           type="text"

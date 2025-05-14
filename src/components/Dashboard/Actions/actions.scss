@@ -1,5 +1,5 @@
-@use "../../../styles/utiles/variables" as *;
-@use "../../../styles/utiles/mixins" as *;
+@use '../../../styles/utiles/variables' as *;
+@use '../../../styles/utiles/mixins' as *;
 
 .actions {
   height: 100%;
@@ -15,7 +15,7 @@
     gap: 5px;
   }
 
-  &__item{
+  &__item {
     height: 40px;
     line-height: 40px;
     text-align: center;
@@ -25,7 +25,7 @@
     color: white;
     border-radius: $b-radius;
     text-transform: capitalize;
-    
+
     @include hover-button;
 
     @include on-desktop {

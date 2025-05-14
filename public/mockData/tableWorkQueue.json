@@ -2,12 +2,54 @@
   "queue": {
     "columns": ["originator", "client/line", "type", "status", "created"],
     "data": [
-      { "originator": "Sam Masters", "client": "NAMEX tech solutions", "line": "Cyber Liability","type": "Underwriter Referral", "status": "New", "created": "04/16/2025" },
-      { "originator": "Annalise Willes", "client": "Maritime Logistics Corp", "line": "Marine Cargo", "type": "Underwriter Referral", "status": "New", "created": "04/20/2025" },
-      { "originator": "Patrick Devenport", "client": "GreenField Energy Ltd", "line": "Loss Control Request", "type": "Loss Control Request", "status": "New", "created": "04/16/2025" },    
-      { "originator": "Anna Killian", "client": "North Star Financial Group", "line": "D&O Liability", "type": "Underwriter Referral", "status": "Pending Review", "created": "04/22/2025" },
-      { "originator": "Anna Killian", "client": "Alliance Healthcare Systems", "line": "Medical Malpractice", "type": "Email", "status": "Completed", "created": "04/28/2025" },
-      { "originator": "me", "client": "QuantumTech Inductries", "line": "Product Liability", "type": "Email", "status": "Completed", "created": "04/20/2025" }
+      {
+        "originator": "Sam Masters",
+        "client": "NAMEX tech solutions",
+        "line": "Cyber Liability",
+        "type": "Underwriter Referral",
+        "status": "New",
+        "created": "04/16/2025"
+      },
+      {
+        "originator": "Annalise Willes",
+        "client": "Maritime Logistics Corp",
+        "line": "Marine Cargo",
+        "type": "Underwriter Referral",
+        "status": "New",
+        "created": "04/20/2025"
+      },
+      {
+        "originator": "Patrick Devenport",
+        "client": "GreenField Energy Ltd",
+        "line": "Loss Control Request",
+        "type": "Loss Control Request",
+        "status": "New",
+        "created": "04/16/2025"
+      },
+      {
+        "originator": "Anna Killian",
+        "client": "North Star Financial Group",
+        "line": "D&O Liability",
+        "type": "Underwriter Referral",
+        "status": "Pending Review",
+        "created": "04/22/2025"
+      },
+      {
+        "originator": "Anna Killian",
+        "client": "Alliance Healthcare Systems",
+        "line": "Medical Malpractice",
+        "type": "Email",
+        "status": "Completed",
+        "created": "04/28/2025"
+      },
+      {
+        "originator": "me",
+        "client": "QuantumTech Inductries",
+        "line": "Product Liability",
+        "type": "Email",
+        "status": "Completed",
+        "created": "04/20/2025"
+      }
     ]
   }
 }

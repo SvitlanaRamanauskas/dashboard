@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import cn from "classnames";
-import "./queue.scss";
-import Table from "@/components/Dashboard/TableQueue/TableQueue";
-import { QueueTableData } from "@/types/queue";
+import { useEffect, useState } from 'react';
+import cn from 'classnames';
+import './queue.scss';
+import Table from '@/components/Dashboard/TableQueue/TableQueue';
+import { QueueTableData } from '@/types/queue';
 
 export default function Queue() {
-  const [activeItem, setActiveItem] = useState("1");
+  const [activeItem, setActiveItem] = useState('1');
 
   const [queueItems, setQueueItems] = useState([]);
 
@@ -15,13 +15,13 @@ export default function Queue() {
   const [tableData, setTableData] = useState<QueueTableData[]>([]);
 
   useEffect(() => {
-    fetch("/mockData/navBar.json")
+    fetch('/mockData/navBar.json')
       .then((res) => res.json())
       .then((data) => setQueueItems(data.queueItems));
   }, []);
 
   useEffect(() => {
-    fetch("/mockData/tableWorkQueue.json")
+    fetch('/mockData/tableWorkQueue.json')
       .then((res) => res.json())
       .then((data) => {
         setTableColumns(data.queue.columns);
@@ -38,8 +38,8 @@ export default function Queue() {
           {queueItems.map((item) => (
             <li
               key={item}
-              className={cn("queue__item", {
-                "queue__item queue__item--active": activeItem === item,
+              className={cn('queue__item', {
+                'queue__item queue__item--active': activeItem === item,
               })}
               onClick={() => setActiveItem(item)}
             >

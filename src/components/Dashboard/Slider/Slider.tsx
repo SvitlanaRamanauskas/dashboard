@@ -1,30 +1,30 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import cn from "classnames";
-import Image from "next/image";
-import "./slider.scss";
+import { useEffect, useRef, useState } from 'react';
+import cn from 'classnames';
+import Image from 'next/image';
+import './slider.scss';
 
 export default function Slider() {
   const [navBarDash, setNavBarDash] = useState<string[]>([]);
-  const [activeDashTab, setActiveDashTab] = useState("dashboard");
+  const [activeDashTab, setActiveDashTab] = useState('dashboard');
   const listRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    fetch("/mockData/navBar.json")
+    fetch('/mockData/navBar.json')
       .then((res) => res.json())
       .then((data) => setNavBarDash(data.navDash));
   }, []);
 
   const scrollLeft = () => {
     if (listRef.current) {
-      listRef.current.scrollBy({ left: -150, behavior: "smooth" });
+      listRef.current.scrollBy({ left: -150, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (listRef.current) {
-      listRef.current.scrollBy({ left: 150, behavior: "smooth" });
+      listRef.current.scrollBy({ left: 150, behavior: 'smooth' });
     }
   };
 
@@ -34,18 +34,18 @@ export default function Slider() {
         <nav className="slider">
           <ul className="slider__list" ref={listRef}>
             {navBarDash.map((item, index) => {
-              const adaptedItem = item.replace(/&/, "and").replace(/\s+/g, "-");
+              const adaptedItem = item.replace(/&/, 'and').replace(/\s+/g, '-');
               const iconPath = `/icons/${
                 activeDashTab === adaptedItem
-                  ? adaptedItem + "Active"
+                  ? adaptedItem + 'Active'
                   : adaptedItem
               }.svg`;
 
               return (
                 <li
                   key={item + index}
-                  className={cn("slider__item", {
-                    "slider__item slider__item--active":
+                  className={cn('slider__item', {
+                    'slider__item slider__item--active':
                       activeDashTab === adaptedItem,
                   })}
                   onClick={() => setActiveDashTab(adaptedItem)}
@@ -59,8 +59,8 @@ export default function Slider() {
                     height={18}
                   />
                   <p
-                    className={cn("slider__item-name", {
-                      "slider__item-name slider__item-name--active":
+                    className={cn('slider__item-name', {
+                      'slider__item-name slider__item-name--active':
                         activeDashTab === adaptedItem,
                     })}
                   >
@@ -78,7 +78,7 @@ export default function Slider() {
           <Image
             width={29.2}
             height={24.4}
-            src={"/icons/arrow-left.svg"}
+            src={'/icons/arrow-left.svg'}
             alt="arrow-left"
           />
         </div>
@@ -87,7 +87,7 @@ export default function Slider() {
           <Image
             width={29.2}
             height={24.4}
-            src={"/icons/arrow-right.svg"}
+            src={'/icons/arrow-right.svg'}
             alt="arrow-right"
           />
         </div>

@@ -1,14 +1,14 @@
-"use client"
+'use client';
 
-import "./breadcrumbs.scss";
+import './breadcrumbs.scss';
 
 export default function Breadcrumbs({ accountName }: { accountName: string }) {
-console.log(accountName)
+  console.log(accountName);
   return (
     <div className="breadcrumbs">
       <p className="breadcrumbs__text">Dashboard //</p>
       <p className="breadcrumbs__text">Accounts //</p>
       <p className="breadcrumbs__text">{accountName}</p>
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-@use "../../../styles/utiles/variables" as *;
-@use "../../../styles/utiles/mixins" as *;
+@use '../../../styles/utiles/variables' as *;
+@use '../../../styles/utiles/mixins' as *;
 
 .table-accounts {
   width: 100%;
@@ -11,7 +11,7 @@
   td:nth-child(5),
   td:nth-child(6),
   th:nth-child(5),
-  th:nth-child(6)  {
+  th:nth-child(6) {
     text-align: end;
   }
 

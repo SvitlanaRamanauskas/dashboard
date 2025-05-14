@@ -1,4 +1,4 @@
-import "./dotcircle.scss";
+import './dotcircle.scss';
 
 export default function DotCircle() {
   return (
@@ -7,5 +7,5 @@ export default function DotCircle() {
       <div className="dot-circle__dot"></div>
       <div className="dot-circle__dot"></div>
     </div>
-  )
+  );
 }

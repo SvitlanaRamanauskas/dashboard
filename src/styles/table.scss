@@ -1,5 +1,5 @@
-@use "./utiles/variables" as *;
-@use "./utiles/mixins" as *;
+@use './utiles/variables' as *;
+@use './utiles/mixins' as *;
 
 table {
   display: none;
@@ -62,11 +62,12 @@ td:last-child {
   }
 }
 
-td>span {
-  color: #94A3B8;
+td > span {
+  color: #94a3b8;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding-left: 3px;
 

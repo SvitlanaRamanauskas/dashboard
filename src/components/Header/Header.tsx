@@ -1,8 +1,7 @@
-import Circle from "../Dashboard/Circle/Circle";
-import "./header.scss";
+import Circle from '../Dashboard/Circle/Circle';
+import './header.scss';
 
 export default function Header() {
-
   return (
     <header className="header">
       <h1 className="header__left">
@@ -11,14 +10,11 @@ export default function Header() {
 
       <div className="header__right">
         <div className="search">
-          <input 
-          type="text"
-          className="search__input"
-          placeholder="search" />
+          <input type="text" className="search__input" placeholder="search" />
         </div>
 
-        <Circle abbr={"ar"} />
+        <Circle abbr={'ar'} />
       </div>
     </header>
-  )
-};
+  );
+}

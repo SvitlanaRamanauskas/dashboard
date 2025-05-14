@@ -1,8 +1,8 @@
-@use "../../styles/utiles/mixins.scss" as *;
+@use '../../styles/utiles/mixins.scss' as *;
 
 .header {
   @include pagePadding;
-  
+
   height: 60px;
   color: var(--text-color);
   display: flex;

@@ -1,5 +1,5 @@
-import Image from "next/image";
-import "./goals.scss";
+import Image from 'next/image';
+import './goals.scss';
 
 export default function Goals() {
   return (
@@ -82,7 +82,9 @@ export default function Goals() {
             </div>
           </div>
 
-          <span className="goals__gradient-number goals__gradient-number--aside">$12M</span>
+          <span className="goals__gradient-number goals__gradient-number--aside">
+            $12M
+          </span>
         </div>
       </div>
 
@@ -93,11 +95,15 @@ export default function Goals() {
           <div className="goals__line goals__line--business-target">
             <div className="goals__gradient">
               <p className="goals__gradient-number">$28.4M</p>
-              <p className="goals__tg goals__gradient-percentage goals__tg--light">68%</p>
+              <p className="goals__tg goals__gradient-percentage goals__tg--light">
+                68%
+              </p>
             </div>
           </div>
 
-          <span className="goals__gradient-number goals__gradient-number--aside">$42M</span>
+          <span className="goals__gradient-number goals__gradient-number--aside">
+            $42M
+          </span>
         </div>
       </div>
     </article>
