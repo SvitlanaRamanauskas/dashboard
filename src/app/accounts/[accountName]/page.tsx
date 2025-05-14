@@ -4,9 +4,9 @@ import NavBarAcc from '@/components/Account/NavBarAcc/NavBarAcc';
 import { notFound } from 'next/navigation';
 
 type Props = {
-  params: {
+  params: Promise<{
     accountName: string;
-  };
+  }>;
 };
 
 export default async function AccountName({ params }: Props) {
