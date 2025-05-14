@@ -3,7 +3,11 @@
 
 .actions {
   height: 100%;
-  padding: 20px;
+  padding: 10px;
+
+  @include on-desktop {
+    padding: 20px;
+  }
 
   &__title {
     padding-bottom: 20px;

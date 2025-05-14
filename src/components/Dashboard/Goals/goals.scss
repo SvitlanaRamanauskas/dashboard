@@ -2,11 +2,15 @@
 @use '../../../styles/utiles/mixins' as *;
 
 .goals {
-  padding: 20px 20px 20px;
+  padding: 10px 10px 10px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   height: 100%;
+
+  @include on-desktop {
+    padding: 20px 20px 20px;
+  }
 
   &__third {
     margin-top: 30px;

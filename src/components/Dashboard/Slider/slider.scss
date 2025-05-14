@@ -21,10 +21,10 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 
-    scrollbar-width: none; // Firefox
     &::-webkit-scrollbar {
-      display: none; // Chrome, Safari
+      display: none;
     }
   }
 
@@ -40,6 +40,7 @@
     @include bordered;
     flex-shrink: 0;
     min-width: fit-content;
+    cursor: pointer;
 
     &--active {
       background-color: var(--text-accent-color);
@@ -55,9 +56,18 @@
     color: var(--text-color);
     font-size: 12px;
     white-space: nowrap;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--accent-color);
+    }
 
     &--active {
       color: white;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 
